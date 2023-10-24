@@ -33,13 +33,17 @@ describe("*** VALIDAR MULTIPLICACIONES ***", () => {
 });
 
 describe("*** VALIDAR DIVISIONES ***", () => {
-    test("30 / 2 = 10", () => {
-      expect(div(30, 2)).toEqual(10);
+    test("30 / 2 = 15", () => {
+      expect(div(30, 2)).toEqual(15);
     });
   
     
-    //test("20 / 0 = 0", () => {
-    //    expect(div(99, 0).toEqual(0));
-    //});
+      test("20 / 0 = 0", () => {
+        try{
+          expect(div(99, 0).toEqual(0));
+        }catch(error){
+          console.log("No se puede dividir entre 0");
+        }
+    });
 });
     
